@@ -2,9 +2,8 @@
   "name": "tripcal",
   "version": "0.0.0",
   "scripts": {
-    "start":"HTTPS=true",
-    "ng": "ng",
     "start": "ng serve",
+    "ng": "ng",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -22,6 +21,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "angular-cli-ghpages": "^2.0.0-beta.2",
     "jquery": "^3.7.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
