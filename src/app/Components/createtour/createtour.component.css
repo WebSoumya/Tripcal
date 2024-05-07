@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.example-card {
+    max-width: 600px;
+    width: 600px;
+    justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-image: url(https://img.freepik.com/free-vector/wave-textures-white-background-vector_53876-60287.jpg);
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .boxes
+{
+   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn
+{
+     
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10%;
+}
+mat-card-header
+{
+   justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: underline;
+}
+mat-card-content
+{
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    
+}
+input
+{
+    width: 20pc;
+    height: 1.5pc;
+}
+
+
+/* CSS */
+.button-24 {
+ background:transparent;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: orangered;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover
+{
+    background-color: rgba(60, 0, 255, 0.916);
+    color: white;
+}
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+

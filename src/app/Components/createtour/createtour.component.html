@@ -1,0 +1,30 @@
+
+<div class="boxes" >
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Create A New Tour</mat-card-title>
+        </mat-card-header>
+        <mat-card-content *ngIf="loggedIn">
+            <form  [formGroup]="newTourForm">
+
+                <label for="name">Group Leader Name: </label><br>
+                <input id="name" type="text" formControlName="Name">
+              <br>
+                <label for="Tour Name">Tour Name </label><br>
+                <input id="Not" type="text" formControlName="Not">
+<br>
+                <label for="Number of Members"> Number Of Members </label><br>
+                <input id="Nom" type="number" formControlName="Nom">
+<br>
+                <label for="Group Leader Contact">Group Leader Contact </label><br>
+                <input id="Not" type="number" formControlName="Contact">
+              
+              </form>
+        </mat-card-content>
+        <mat-card-actions class="btn">
+            <button class="fb" *ngIf="createform"  mat-button class="button-24" (click)="signInWithFB()" >Login With Facebook ⓕ </button>&nbsp;
+            <button *ngIf="loggedIn" mat-button class="button-24" (click)="signOut()">Logout</button>&nbsp;
+          <button *ngIf="loggedIn" mat-button class="button-24" (click)="create()">Create</button>
+        </mat-card-actions>
+      </mat-card>
+</div>

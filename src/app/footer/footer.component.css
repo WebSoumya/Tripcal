@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+mat-toolbar
+{
+    background-color: rgb(239, 106, 58);
+}
+/* .footer {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    flex: auto;
+    text-align: center;
+    color: white;
+    bottom: 0;
+    
+    position: absolute;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+    
+} */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  
+    padding-bottom: 115px;
+}
+
+footer {
+    background-color: rgb(239, 106, 58);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: white;
+    height:20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    letter-spacing: 2px;
+  }

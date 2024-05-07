@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.header
+{
+    font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  flex: auto;
+  text-align: center;
+  color: white;
+}
+mat-toolbar
+{
+    background-color: rgb(239, 106, 58);
+}
