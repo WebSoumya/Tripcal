@@ -1,0 +1,12 @@
+{
+    "users":[
+        {
+            
+    "id":"1",
+    "username":"Abc",
+    "useremail":"abc",
+    "tripcodes": "abc",
+    "leader":true
+        }
+    ]
+}
