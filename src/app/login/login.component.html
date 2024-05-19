@@ -1,0 +1,31 @@
+<div class="boxes" >
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Login Form</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form  [formGroup]="LoginForm">
+
+                <div *ngIf="!otpsent">
+                <label for="Email id">Enter your Email id </label><br>
+                <input id="Email" type="text" formControlName="Email">
+            </div>
+            <br>
+            <div *ngIf="otpsent">
+                <label for="OTP"> Enter your OTP </label><br>
+                <input id="OTP" type="number" formControlName="OTP">
+                <h6 *ngIf="invalid">*INVALID OTP</h6>
+            </div>
+            
+                
+              
+              </form>
+        </mat-card-content>
+        <mat-card-actions class="btn">
+            <button mat-button *ngIf="!otpsent" class="button-24" (click)="sendotp()">Send OTP</button>
+            <button mat-button *ngIf="otpsent" class="button-24" (click)="checkotp()">Login</button>
+            <button mat-button *ngIf="otpsent" class="button-24" (click)="checkotp()">Re-Send OTP</button>
+            <button mat-button *ngIf="otpsent" class="button-24" (click)="editemail()">Edit Email</button>
+        </mat-card-actions>
+      </mat-card>
+</div>

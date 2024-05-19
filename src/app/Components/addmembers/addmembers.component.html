@@ -1,0 +1,36 @@
+<div>
+<div class="boxes" >
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title *ngIf="!showfinal">Add all members including yourself</mat-card-title>
+          <mat-card-title *ngIf="showfinal"> All members are added succesfully <br> Happy Journey!!!</mat-card-title>
+          
+        </mat-card-header>
+        <mat-card-content *ngIf="!showfinal">
+            <mat-card-title class="Member">Member {{currentmember}}</mat-card-title>
+            <form  [formGroup]="newMemberForm">
+            
+                
+                <label for="useremail">Member Email</label><br>
+                <input id="uemail" type="email" formControlName="uemail" name="uemail">
+                <br>
+                <label for="username">Member Name </label><br>
+                <input  id="uname" type="text" formControlName="uname">
+                <p class="redmark" *ngIf="wrongemail">
+                    *Email address is not valid or *Name cannot be null<br>
+                </p>
+                
+              
+              </form>
+        </mat-card-content>
+        
+        <mat-card-actions class="btn">
+            <!-- <button class="fb" *ngIf="createform && !loggedIn"  mat-button class="button-24" (click)="signInWithFB()" >Login With Facebook ⓕ </button>&nbsp; -->
+            <!-- <button  mat-button class="button-24" (click)="signOut()">Logout</button>&nbsp; -->
+          <button *ngIf="!created"  mat-button class="button-24" (click)="create()">Add Member</button>
+          <button *ngIf="showfinal"  mat-button class="button-24" (click)="final()">Finalize Tour</button>
+          
+        </mat-card-actions>
+      </mat-card>
+</div>
+</div>

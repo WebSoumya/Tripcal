@@ -10,17 +10,22 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormGroup,FormControl, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './Components/home/home.component';
 import { CreatetourComponent } from './Components/createtour/createtour.component';
 import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
+import { LoginComponent } from './login/login.component';
+import { AddmembersComponent } from './Components/addmembers/addmembers.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    CreatetourComponent
+    CreatetourComponent,
+    LoginComponent,
+    AddmembersComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,8 @@ import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, So
     MatCardModule,
     MatListModule,
     ReactiveFormsModule,
-    SocialLoginModule
+    SocialLoginModule,
+    HttpClientModule
   ],
   providers: [{
     provide: 'SocialAuthServiceConfig',
