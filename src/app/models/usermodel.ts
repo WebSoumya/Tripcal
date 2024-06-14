@@ -4,7 +4,7 @@ export interface usermodel
 
     username: string
     useremail:string
-    tripcodes: string
+    tripcode: string
     tripname:string
     members:number
     days:number

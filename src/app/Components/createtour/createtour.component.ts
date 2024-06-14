@@ -25,7 +25,7 @@ export class CreatetourComponent {
   userform:usermodel = {
     username: "",
     useremail:"",
-    tripcodes: "",
+    tripcode: "",
     tripname:"",
     members:0,
     days:0
@@ -88,7 +88,7 @@ ngOnInit()
 // this.userform.username=this.user.name
 this.userform.tripname = this.newTourForm.controls['Not'].value
 this.userform.members =this.newTourForm.controls['Nom'].value
-this.userform.tripcodes = this.gettripcode(this.userform.tripname)
+this.userform.tripcode = this.gettripcode(this.userform.tripname)
 this.userform.days = this.newTourForm.controls['Nod'].value
 // console.log(typeof(this.userform))
 this.showchild=true

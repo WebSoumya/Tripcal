@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 .example-card {
-    max-width: 600px;
+    max-width:600px;
     width: 600px;
     justify-content: center;
   align-items: center;
   /* border-radius: 20px; */
   background-image: url(https://img.freepik.com/free-vector/wave-textures-white-background-vector_53876-60287.jpg);
+  background-color: white;
   }
   
   .example-header-image {
@@ -33,24 +35,80 @@ mat-card-header
 {
    justify-content: center;
     align-items: center;
-    padding-bottom: 10%;
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
+    padding-bottom: 2%;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
     font-style: normal;
-    font-size: 20px;
-    text-decoration: underline;
+    font-size: 30px;
+    color: #650000;
+    text-shadow: 1px 1px 5px red;
+    
 }
 mat-card-content
 {
     justify-content: center;
     align-items: center;
     padding-bottom: 5%;
-    font-family: "Pacifico", cursive;
+    font-family: "Libre Baskerville", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 30px;
     
 }
+
+.summurybox
+{
+  max-width: 350px;
+  width: 400px;
+  background-color:  rgb(239, 106, 58);
+  /* display: flex; */
+  height: auto;
+  margin-top: 6%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  justify-content: center;
+    /* align-items: center; */
+    border-radius: 50px;
+}
+
+.uname
+{
+  padding-top: 2%;
+  font-weight: 600;
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
+  font-size: 30px;
+  flex: auto;
+  text-align: center;
+  color: white;
+}
+
+.utext
+{
+
+  padding: 2%;
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
+  font-size: 25px;
+  font-weight:1000;
+  flex: auto;
+  text-align: center;
+  color:  rgb(200, 58, 6);
+}
+
+.utext-2
+{
+  font-weight: 600;
+  padding: 2%;
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
+  font-size: 20px;
+  flex: auto;
+  text-align: center;
+  color:  rgb(255, 255, 255);
+}
+
+
 input
 {
     width: 20pc;

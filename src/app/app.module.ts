@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,12 +11,13 @@ import {MatListModule} from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormGroup,FormControl, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { HomeComponent } from './Components/home/home.component';
 import { CreatetourComponent } from './Components/createtour/createtour.component';
 import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
 import { LoginComponent } from './login/login.component';
 import { AddmembersComponent } from './Components/addmembers/addmembers.component';
+import { TourboxComponent } from './Components/tourbox/tourbox.component';
+import { ExpensedialogboxComponent } from './Components/expensedialogbox/expensedialogbox.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,8 @@ import { AddmembersComponent } from './Components/addmembers/addmembers.componen
     CreatetourComponent,
     LoginComponent,
     AddmembersComponent,
+    TourboxComponent,
+    ExpensedialogboxComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,10 +38,13 @@ import { AddmembersComponent } from './Components/addmembers/addmembers.componen
     MatCardModule,
     MatListModule,
     ReactiveFormsModule,
-    SocialLoginModule,
-    HttpClientModule
+     SocialLoginModule,
+    HttpClientModule,
+    MatDialogModule
   ],
-  providers: [{
+  providers: [
+    MatDialog,
+    {
     provide: 'SocialAuthServiceConfig',
     useValue: {
       autoLogin: false,
@@ -52,7 +58,8 @@ import { AddmembersComponent } from './Components/addmembers/addmembers.componen
         console.error(err);
       }
     } as SocialAuthServiceConfig,
-  }],
+  }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

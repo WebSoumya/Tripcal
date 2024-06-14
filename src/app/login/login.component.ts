@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
 
+  emailPattern: RegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  wrongemail=false
   otpsent=false
   generatedotp=0
   invalid=false
@@ -37,6 +39,14 @@ export class LoginComponent {
 
   sendotp()
   {
+
+    if(!this.emailPattern.test(this.LoginForm.controls['Email'].value) )
+      {
+    this.wrongemail = true
+   // this.LoginForm.reset()
+      }
+
+      else{
     
 console.log(this.LoginForm.value)
 this.service.authentication(this.LoginForm.controls['Email'].value).subscribe(res=>{
@@ -44,6 +54,8 @@ this.service.authentication(this.LoginForm.controls['Email'].value).subscribe(re
   this.generatedotp=res
 })
 this.otpsent=true
+this.wrongemail = false
+      }
   }
   
   checkotp()
@@ -53,6 +65,7 @@ if(this.generatedotp===this.LoginForm.controls['OTP'].value)
     const cookie = this.generatecookie()
     const date = this.getexpiry()
     document.cookie=`Tripcalsessionid=${cookie} ; ${date}`
+    document.cookie=`useremail=${this.LoginForm.controls['Email'].value} ; ${date}`
    //document.cookie = "tripcal= cookieworks! ; expires=Sun, 11 May 2024 21:20:00 UTC"
      this.router.navigate(["/home"])
   }

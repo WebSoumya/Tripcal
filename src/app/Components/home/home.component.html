@@ -1,11 +1,11 @@
 
  <div class="boxes" >
-      <span class="btn1" (click)="create()">
+      <span  *ngIf="!Notrip" class="btn1" (click)="create()">
         Create Your Tour
       </span>
       &nbsp; &nbsp;
-      <span class="btn1">
-         Search Your Tour
+      <span class="btn1" *ngIf="Notrip" (click)="list()">
+         Your Tour List
       </span>
   </div>
   &nbsp;
@@ -17,4 +17,5 @@
     <span class="btn1">
       Know About us
     </span>
+    <!-- <button (click)="test()">getalltrip</button> -->
 </div>

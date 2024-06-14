@@ -1,0 +1,33 @@
+<div ><div class="boxes">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Current Trip - {{tripname}}</mat-card-title> <br>
+      </mat-card-header>
+      <mat-card-content >
+        <div class="summurybox">
+            <div class="uname">Hello {{uname}},</div> 
+            
+            <div class="utext-2">Your Current Value is : {{mycurrentvalue}}</div>
+
+           
+            </div>
+            <div *ngIf="!showall">
+                <div class="utext" *ngFor="let cal of displaycal;let i=index">
+                    <p *ngIf="displaycal[i]==x">Pay {{cal}} to {{displaylist[i]}}</p>
+                    <p *ngIf="displaycal[i]==x">Get {{cal}} from {{displaylist[i]}}</p>
+                </div>
+
+            
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions class="btn">
+        <!-- <button class="fb" *ngIf="createform && !loggedIn"  mat-button class="button-24" (click)="signInWithFB()" >Login With Facebook ⓕ </button>&nbsp; -->
+        <!-- <button  mat-button class="button-24" (click)="signOut()">Logout</button>&nbsp; -->
+        <button   mat-button class="button-24" (click)="addexpenses()">ADD Expense</button>
+        <button   mat-button class="button-24" >All Expenses</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  </div>
+  

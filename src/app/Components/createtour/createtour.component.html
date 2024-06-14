@@ -16,7 +16,8 @@
 
         <label for="Number of Members"> Number Of Members </label><br>
         <input id="Nom" type="number" formControlName="Nom">
-        <div class="redmark" *ngIf="lowmembercount">
+        
+        <div class="redmark" *ngIf="lowmembercount"> <br>
           * Member Value Should be greater than 1 <br>
           * Day value can not be 0 <br>
           * Tripname canot be blank

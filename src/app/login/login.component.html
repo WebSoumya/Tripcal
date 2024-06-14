@@ -10,10 +10,13 @@
                 <label for="Email id">Enter your Email id </label><br>
                 <input id="Email" type="text" formControlName="Email">
             </div>
+            <p class="redmark" *ngIf="wrongemail">
+                *Email address is not valid <br>
+            </p>
             <br>
             <div *ngIf="otpsent">
                 <label for="OTP"> Enter your OTP </label><br>
-                <input id="OTP" type="number" formControlName="OTP">
+                <input id="OTP" type="number" formControlName="OTP" >
                 <h6 *ngIf="invalid">*INVALID OTP</h6>
             </div>
             
